@@ -22,6 +22,8 @@ public class MovieController {
         this.movieService = movieService;
     }
 
+
+
     public void addUsingConsole(){
         System.out.println( "What is the movie title?" );
         Scanner scanner=new Scanner(System.in);
