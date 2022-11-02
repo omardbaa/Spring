@@ -16,17 +16,16 @@ public class FileMovieRepository implements MovieRepositoryInterface {
     @Value("${movies.file.location}")
     private File file;
 
-    public void add(Movie movie){
+    public void add(Movie movie) {
         FileWriter writer;
-        try{
-            writer=new FileWriter(file,true);
-            writer.write(movie.getTitle()+";"+movie.getGenre()+"\n");
+        try {
+            writer = new FileWriter(file, true);
+            writer.write(movie.getTitle() + ";" + movie.getGenre() + "\n");
             writer.close();
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("The movie "+movie.getTitle()+" Of genre "+movie.getGenre()+" has been added successfully.");
+        System.out.println("The movie " + movie.getTitle() + " Of genre " + movie.getGenre() + " has been added successfully.");
     }
 
     public File getFile() {

@@ -13,7 +13,7 @@ import org.springframework.context.annotation.PropertySource;
  * Hello world!
  */
 @SpringBootApplication
-@PropertySource("classpath:application.properties")
+//@PropertySource("classpath:application.properties")
 public class App {
 
 
