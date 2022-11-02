@@ -1,10 +1,8 @@
 package dvdStore.service;
 
-import dvdStore.entity.Movie;
-import org.springframework.stereotype.Component;
 
+import dvdStore.entity.Movie;
 
 public interface MovieServiceInterface {
-
     void registerMovie(Movie movie);
 }

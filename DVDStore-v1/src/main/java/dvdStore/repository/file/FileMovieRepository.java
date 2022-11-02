@@ -1,14 +1,16 @@
 package dvdStore.repository.file;
 
+
 import dvdStore.entity.Movie;
-import dvdStore.service.MovieRepositoryInterface;
+import dvdStore.repository.MovieRepositoryInterface;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-//@Repository
+@Repository
 public class FileMovieRepository implements MovieRepositoryInterface {
 
     @Value("${movies.file.location}")
@@ -24,7 +26,7 @@ public class FileMovieRepository implements MovieRepositoryInterface {
         catch (IOException e){
             e.printStackTrace();
         }
-        System.out.println("The movie "+movie.getTitle()+" has been added.");
+        System.out.println("The movie "+movie.getTitle()+" Of genre "+movie.getGenre()+" has been added successfully.");
     }
 
     public File getFile() {

@@ -1,13 +1,19 @@
 package dvdStore.repository.memory;
 
 import dvdStore.entity.Movie;
-import dvdStore.service.MovieRepositoryInterface;
+import dvdStore.repository.MovieRepositoryInterface;
+
+import java.util.ArrayList;
+import java.util.List;
 
 //@Repository
 public class MemoryMovieRepository implements MovieRepositoryInterface {
-    public void add(Movie movie)
-    {
-        System.out.println("the movie has been added successfully ");
+
+    private List<Movie> movies=new ArrayList<>();
+
+    public void add(Movie movie){
+        movies.add(movie);
+        System.out.println("The movie "+movie.getTitle()+" has been added.");
     }
 
 }
