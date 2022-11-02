@@ -1,7 +1,7 @@
-package dvdStore.controller.movie;
+package dvdStore.controller;
 
 import dvdStore.entity.Movie;
-import dvdStore.genercInterface.MovieServiceInterface;
+import dvdStore.service.MovieServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 @Controller
 public class MovieController {
-
     @Autowired
     private MovieServiceInterface movieService;
 

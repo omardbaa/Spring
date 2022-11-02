@@ -1,4 +1,4 @@
-package dvdStore.genercInterface;
+package dvdStore.service;
 
 import dvdStore.entity.Movie;
 import org.springframework.stereotype.Component;

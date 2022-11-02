@@ -1,13 +1,11 @@
 package dvdStore.service;
 
 import dvdStore.entity.Movie;
-import dvdStore.genercInterface.MovieRepositoryInterface;
-import dvdStore.genercInterface.MovieServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-
+//@Service
 public class DefaultMovieService implements MovieServiceInterface {
+
 
     @Autowired
     private MovieRepositoryInterface movieRepository;
@@ -20,7 +18,7 @@ public class DefaultMovieService implements MovieServiceInterface {
         this.movieRepository = movieRepository;
     }
 
-    public void registerMovie(Movie movie) {
+    public void registerMovie(Movie movie){
 
         movieRepository.add(movie);
     }
