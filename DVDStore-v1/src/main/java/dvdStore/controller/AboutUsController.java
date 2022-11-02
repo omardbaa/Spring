@@ -11,7 +11,7 @@ public class AboutUsController {
     public String displayFullDetails() {
         System.out.println("Attempt to display apropos");
 
-        return "";
+        return "index";
     }
 
 }
