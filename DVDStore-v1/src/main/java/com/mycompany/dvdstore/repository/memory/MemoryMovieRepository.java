@@ -9,7 +9,7 @@ import java.util.List;
 
 //@Repository
 public class MemoryMovieRepository implements MovieRepositoryInterface {
-
+    public static Long lastId=0L;
     private List<Movie> movies=new ArrayList<>();
 
     public void add(Movie movie){
@@ -22,4 +22,11 @@ public class MemoryMovieRepository implements MovieRepositoryInterface {
         return movies;
     }
 
+
+    @Override
+    public Movie getById(Long id) {
+        return movies.stream().
+                filter(m -> m.getId()==id).
+                findFirst().get();
+    }
 }
