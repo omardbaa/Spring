@@ -2,19 +2,19 @@ package com.mycompany.dvdstore.repository.memory;
 
 import com.mycompany.dvdstore.entity.Movie;
 import com.mycompany.dvdstore.repository.MovieRepositoryInterface;
-import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 //@Repository
 public class MemoryMovieRepository implements MovieRepositoryInterface {
-    public static Long lastId=0L;
-    private List<Movie> movies=new ArrayList<>();
+    public static Long lastId = 0L;
+    private final List<Movie> movies = new ArrayList<>();
 
-    public void add(Movie movie){
+    public Movie add(Movie movie) {
         movies.add(movie);
-        System.out.println("The movie "+movie.getTitle()+" has been added.");
+        System.out.println("The movie " + movie.getTitle() + " has been added.");
+        return movie;
     }
 
     @Override
@@ -24,9 +24,9 @@ public class MemoryMovieRepository implements MovieRepositoryInterface {
 
 
     @Override
-    public Movie getById(Long id) {
+    public Movie getById(long id) {
         return movies.stream().
-                filter(m -> m.getId()==id).
+                filter(m -> m.getId() == id).
                 findFirst().get();
     }
 }

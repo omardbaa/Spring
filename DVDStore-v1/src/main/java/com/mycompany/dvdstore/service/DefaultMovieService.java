@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class DefaultMovieService implements MovieServiceInterface{
+public class DefaultMovieService implements MovieServiceInterface {
 
     @Autowired
     private MovieRepositoryInterface movieRepository;
@@ -21,9 +21,10 @@ public class DefaultMovieService implements MovieServiceInterface{
         this.movieRepository = movieRepository;
     }
 
-    public void registerMovie(Movie movie){
+    public Movie registerMovie(Movie movie) {
 
         movieRepository.add(movie);
+        return movie;
     }
 
     @Override
@@ -32,7 +33,7 @@ public class DefaultMovieService implements MovieServiceInterface{
     }
 
     @Override
-    public Movie getMovieById(long id) {
+    public Movie getMovieById(Long id) {
         return movieRepository.getById(id);
     }
 
