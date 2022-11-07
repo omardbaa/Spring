@@ -1,8 +1,10 @@
 package com.mycompany.dvdstore.entity;
 
 
-public class Movie {
+import org.springframework.data.annotation.Id;
 
+public class Movie {
+@Id
     private Long id;
     private String title;
     private String genre;

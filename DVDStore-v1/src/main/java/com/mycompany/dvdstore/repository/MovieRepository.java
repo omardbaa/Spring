@@ -1,5 +1,5 @@
 package com.mycompany.dvdstore.repository;
-
+/*
 import com.mycompany.dvdstore.entity.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -46,3 +46,4 @@ public class MovieRepository implements MovieRepositoryInterface {
                         rs.getString("GENRE"), rs.getString("DESCRIPTION")));
     }
 }
+*/

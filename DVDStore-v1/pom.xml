@@ -19,9 +19,9 @@
 
   <dependencies>
     <dependency>
-      <groupId> org.springframework </groupId>
-      <artifactId> spring-jdbc </artifactId>
-      <version>5.3.23</version>
+      <groupId> org.springframework.data </groupId>
+      <artifactId> spring-data-jdbc </artifactId>
+      <version>2.4.5</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
