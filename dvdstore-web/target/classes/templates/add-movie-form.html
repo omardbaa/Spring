@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un film</title>
+</head>
+<body>
+<form th:action="@{/movie/add}" th:object="${movieForm}" method="POST">
+
+    <p>Add Movie:</p>
+    <p>Title</p>
+    <p>
+        <input type="text" th:field="*{title}"/>
+    </p>
+    <div th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></div>
+    <p>Add the main actor:</p>
+    <p>First Name</p>
+    <p>
+        <input type="text" th:field="*{firstName}"/>
+    </p>
+    <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+
+    <p>Last Name</p>
+    <p>
+        <input type="text" th:field="*{lastName}"/>
+    </p>
+    <div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
+
+    <p>Genre</p>
+    <p>
+    <select th:field="*{genre}">
+        <option th:value="COMEDIE" th:text="Comédie"></option>
+        <option th:value="HORREUR" th:text="Horreur"></option>
+        <option th:value="THRILLER" th:text="Thriller"></option>
+        <option th:value="ACTION" th:text="Action"></option>
+        <option th:value="ROMANTIQUE" th:text="Romantique"></option>
+        <option th:value="DRAME" th:text="Drame"></option>
+        <option th:value="ANIMATION" th:text="Animation"></option>
+    </select>
+    </p>
+    <div th:if="${#fields.hasErrors('genre')}" th:errors="*{genre}"></div>
+
+    <p>Description</p>
+    <p><textarea rows="4" cols="50" th:field="*{description}"/></p>
+    <div th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></div>
+
+    <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>
