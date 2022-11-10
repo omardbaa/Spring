@@ -16,7 +16,7 @@ public class HelloBeanMethodThree {
     public void afterPropertiesSet()
             throws Exception {
         System.out.println(
-                "Bean HelloWorld has been "
+                "Bean HelloBeanMethodThree has been "
                         + "instantiated and I'm the "
                         + "init() method By @PostConstruct annotation");
     }
