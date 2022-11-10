@@ -9,4 +9,11 @@
           init-method="init" destroy-method="destroy"/>
     <bean id="helloBeanTwo" class="com.mybean.HelloBeanMethodTwo"/>
 
+    <!-- activate the @PostConstruct and @PreDestroy annotation -->
+
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+
+    <!-- configure the bean -->
+    <bean class="com.mybean.HelloBeanMethodThree"/>
+
 </beans>

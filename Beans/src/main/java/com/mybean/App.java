@@ -21,7 +21,7 @@ public class App
         ConfigurableApplicationContext cap
                 = new ClassPathXmlApplicationContext(
                 "bean.xml");
-        System.out.println( "Hello World! " );
+        System.out.println( "All Methods work properly " );
         // It will close the spring container
         // and as a result invokes the
         // destroy() method
